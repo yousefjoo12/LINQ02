@@ -59,8 +59,32 @@ namespace LINQ02
 			//var Res = Arr.Sum();
 			//Console.WriteLine($"Result :: {Res}");
 			#endregion
+			//string[] word = File.ReadAllLines("dictionary_english.txt");
 			#region 5
-
+			//int totalChar = word.Sum(w => w.Length);
+			//Console.WriteLine($"totalChar: {totalChar}");
+			#endregion
+			#region 9
+			//var Result = ProductsList.GroupBy(P => P.Category).Select(C => new
+			//{
+			//	Category = C.Key,
+			//	UnitsInStock = C.Sum(p => p.UnitsInStock)
+			//});
+			//foreach (var item in Result)
+			//{
+			//    Console.WriteLine($"Category: {item.Category}, Total of Stock: {item.UnitsInStock}");
+			//}
+			#endregion
+			#region 10
+			var Result = ProductsList.GroupBy(P => P.Category).Select(C => new
+			{
+				Category = C.Key,
+				UnitPrice = C.Min(p => p.UnitPrice)
+			});
+			foreach (var item in Result)
+			{
+				Console.WriteLine($"Category: {item.Category}, Total of Stock: {item.UnitPrice}");
+			}
 			#endregion
 			#endregion
 
