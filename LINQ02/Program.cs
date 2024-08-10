@@ -187,9 +187,55 @@ namespace LINQ02
 			#endregion
 			#endregion
 			#region  Partitioning Operators
+			#region 1
 
+			//var Result = CustomersList.Where(C => C.Region == "WA").SelectMany(C => C.Orders).Take(3); ;
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
 
 			#endregion
+			#region 2
+
+			//var Result = CustomersList.Where(C => C.Region == "WA").SelectMany(C => C.Orders).Skip(2); ;
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#region 3
+			//int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+			//var Result = numbers.TakeWhile((v, i) => v > i);
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#region 4
+			//int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+			//var Result = numbers.Where(p => p % 3 == 0 && p != 0);
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#region 5
+
+			//int[] nums = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };
+
+			//var Result = nums.SkipWhile((v, i) => v >= i);
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#endregion
+
 		}
 	}
 }
