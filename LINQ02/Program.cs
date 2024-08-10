@@ -151,7 +151,45 @@ namespace LINQ02
 			//}
 			#endregion
 			#endregion
+			#region Set Operators
+			#region 1
+			//var Result = ProductsList.Select(p => p.Category).Distinct();
 
+			//foreach (var item in Result)
+			//{
+			//    Console.WriteLine(item);
+			//}
+			#endregion
+			var list01 = ProductsList.Select(P => P.ProductName[0]);
+			var list02 = CustomersList.Select(C => C.CustomerName[0]);
+			#region 2
+			//var Result = list01.Union(list02);
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#region 3
+			//var Result = list01.Intersect(list02);
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#region 4
+			//var Result = list01.Except(list02);
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//}
+			#endregion
+			#endregion
+			#region  Partitioning Operators
+
+
+			#endregion
 		}
 	}
 }
