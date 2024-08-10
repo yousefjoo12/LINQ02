@@ -76,15 +76,79 @@ namespace LINQ02
 			//}
 			#endregion
 			#region 10
-			var Result = ProductsList.GroupBy(P => P.Category).Select(C => new
-			{
-				Category = C.Key,
-				UnitPrice = C.Min(p => p.UnitPrice)
-			});
-			foreach (var item in Result)
-			{
-				Console.WriteLine($"Category: {item.Category}, Total of Stock: {item.UnitPrice}");
-			}
+			//var Result = ProductsList.GroupBy(P => P.Category).Select(C => new
+			//{
+			//	Category = C.Key,
+			//	UnitPrice = C.Min(p => p.UnitPrice)
+			//});
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine($"Category: {item.Category}, Total of Stock: {item.UnitPrice}");
+			//}
+			#endregion
+			#region 11
+			//var Result = from P in ProductsList
+
+			//			 group P by P.Category into C
+
+			//			 let CheapProduct = C.OrderBy(p => p.UnitPrice).FirstOrDefault()
+
+			//			 select new
+			//			 {
+			//				 Category = C.Key,
+			//				 CheapProduct = CheapProduct
+			//			 };
+			//foreach (var price in Result)
+			//{
+			//	Console.WriteLine($"Category: {price.Category}, Product: {price.CheapProduct?.ProductName}, Price: {price.CheapProduct?.UnitPrice}");
+			//}
+
+			#endregion
+			#region 12
+
+			//var Result = from product in ProductsList
+			//			 group product by product.Category into productGroup
+			//			 select new
+			//			 {
+			//				 Category = productGroup.Key,
+			//				 ExpensivePrice = productGroup.Max(p => p.UnitPrice)
+			//			 };
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine($"Category: {item.Category}, Most Expensive Price: {item.ExpensivePrice}");
+			//}
+
+			#endregion
+			#region 13
+
+			//var Result = from P in ProductsList
+			//			 group P by P.Category into o
+			//			 let ExpensiveProduct = o.OrderByDescending(p => p.UnitPrice).FirstOrDefault()
+			//			 select new
+			//			 {
+			//				 Category = o.Key,
+			//				 ExpensiveProduct = ExpensiveProduct
+			//			 };
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine($"Category: {item.Category}, Product: {item.ExpensiveProduct?.ProductName}, Price: {item.ExpensiveProduct?.UnitPrice}");
+			//}
+
+			#endregion
+			#region 14
+
+			//var Result = ProductsList.GroupBy(P => P.Category).Select(C => new
+			//{
+			//	Category = C.Key,
+			//	AveragePrice = C.Average(p => p.UnitPrice)
+			//});
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine($"Category: {item.Category}, Average Price: {item.AveragePrice}");
+			//}
 			#endregion
 			#endregion
 
