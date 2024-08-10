@@ -235,6 +235,71 @@ namespace LINQ02
 			//}
 			#endregion
 			#endregion
+			#region Quantifiers
+
+			#region 2
+
+			//var Result = ProductsList.GroupBy(p => p.Category).Where(I => I.Count(p => p.UnitsInStock == 0) > 0);
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine(item);
+			//	foreach (var prod in item)
+			//		Console.WriteLine(prod);
+			//}
+
+			#endregion
+			#region 3
+
+			//var result = ProductsList.GroupBy(p => p.Category).Where(g => g.All(p => p.UnitsInStock > 0));
+			//foreach (var category in result)
+			//{
+			//	Console.WriteLine(category.Key);
+			//	foreach (var product in category)
+			//	{
+			//		Console.WriteLine(product);
+			//	}
+			//}
+
+			#endregion
+			#endregion
+			#region Grouping Operators
+
+			#region 1
+
+			//List<int> numbers = new List<int> { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15 };
+
+			//var Result = numbers.GroupBy(n => n % 5);
+
+			//foreach (var item in Result)
+			//{
+			//	Console.WriteLine($"remainder of {item.Key}  divided by 5:");
+			//	foreach (var number in item)
+			//	{
+			//		Console.WriteLine(number);
+			//	}
+			//}
+
+			#endregion
+			#region 2
+
+			#endregion
+
+			#region 3
+			string[] arr = { "from", "salt", "earn", "last", "near", "form" };
+
+			var groupedWords = arr.GroupBy(word => new string(word.OrderBy(c => c).ToArray()));
+
+			foreach (var group in groupedWords)
+			{
+				Console.WriteLine($"*********************");
+				foreach (var word in group)
+				{
+					Console.WriteLine(word);
+				}
+			}
+			#endregion
+
+			#endregion
 
 		}
 	}
